@@ -825,6 +825,16 @@ export function Settings() {
               }
             ></input>
           </ListItem>
+          <ListItem
+            title="Devtools"
+          >
+              <IconButton
+                icon={<ConfigIcon />}
+                text="Launch Devtools"
+                onClick={() => {window.open('chrome://inspect/#devices');}}
+              />
+
+          </ListItem>
         </List>
 
         <SyncItems />
