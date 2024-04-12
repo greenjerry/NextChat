@@ -129,7 +129,7 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-4-0314",
-    available: true,
+    available: false,
     provider: {
       id: "openai",
       providerName: "OpenAI",
@@ -138,7 +138,7 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-4-0613",
-    available: true,
+    available: false,
     provider: {
       id: "openai",
       providerName: "OpenAI",
@@ -147,7 +147,7 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-4-32k",
-    available: true,
+    available: false,
     provider: {
       id: "openai",
       providerName: "OpenAI",
@@ -156,7 +156,7 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-4-32k-0314",
-    available: true,
+    available: false,
     provider: {
       id: "openai",
       providerName: "OpenAI",
@@ -165,7 +165,7 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-4-32k-0613",
-    available: true,
+    available: false,
     provider: {
       id: "openai",
       providerName: "OpenAI",
@@ -174,7 +174,7 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-4-turbo-preview",
-    available: true,
+    available: false,
     provider: {
       id: "openai",
       providerName: "OpenAI",
@@ -183,7 +183,7 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-4-1106-preview",
-    available: true,
+    available: false,
     provider: {
       id: "openai",
       providerName: "OpenAI",
@@ -192,7 +192,7 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-4-0125-preview",
-    available: true,
+    available: false,
     provider: {
       id: "openai",
       providerName: "OpenAI",
@@ -201,7 +201,7 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-4-vision-preview",
-    available: true,
+    available: false,
     provider: {
       id: "openai",
       providerName: "OpenAI",
@@ -219,7 +219,7 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-3.5-turbo-0125",
-    available: true,
+    available: false,
     provider: {
       id: "openai",
       providerName: "OpenAI",
@@ -228,7 +228,7 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-3.5-turbo-0301",
-    available: true,
+    available: false,
     provider: {
       id: "openai",
       providerName: "OpenAI",
@@ -237,7 +237,7 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-3.5-turbo-0613",
-    available: true,
+    available: false,
     provider: {
       id: "openai",
       providerName: "OpenAI",
@@ -246,7 +246,7 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-3.5-turbo-1106",
-    available: true,
+    available: false,
     provider: {
       id: "openai",
       providerName: "OpenAI",
@@ -255,7 +255,7 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-3.5-turbo-16k",
-    available: true,
+    available: false,
     provider: {
       id: "openai",
       providerName: "OpenAI",
@@ -264,7 +264,7 @@ export const DEFAULT_MODELS = [
   },
   {
     name: "gpt-3.5-turbo-16k-0613",
-    available: true,
+    available: false,
     provider: {
       id: "openai",
       providerName: "OpenAI",
@@ -287,6 +287,33 @@ export const DEFAULT_MODELS = [
       id: "google",
       providerName: "Google",
       providerType: "google",
+    },
+  },
+  {
+    name: "gemini-1.5-pro-latest",
+    available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
+  },
+  {
+    name: "gemini-1.5-pro-paid",
+    available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
+    },
+  },
+  {
+    name: "anthropic.claude-3-sonnet-20240229-v1:0",
+    available: true,
+    provider: {
+      id: "openai",
+      providerName: "OpenAI",
+      providerType: "openai",
     },
   },
 ] as const;
