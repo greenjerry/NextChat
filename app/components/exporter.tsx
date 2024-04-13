@@ -313,7 +313,7 @@ export function PreviewActions(props: {
     setShouldExport(false);
 
     var api: ClientApi;
-    if (config.modelConfig.model.startsWith("gemini")) {
+    if (config.modelConfig.model.startsWith("gemini-pro")) {
       api = new ClientApi(ModelProvider.GeminiPro);
     } else {
       api = new ClientApi(ModelProvider.GPT);
