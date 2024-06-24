@@ -69,12 +69,21 @@ export enum ServiceProvider {
   OpenAI = "OpenAI",
   Azure = "Azure",
   Google = "Google",
+  Anthropic = "Anthropic",
 }
 
 export enum ModelProvider {
   GPT = "GPT",
   GeminiPro = "GeminiPro",
+  Claude = "Claude",
 }
+
+export const Anthropic = {
+  ChatPath: "v1/messages",
+  ChatPath1: "v1/complete",
+  ExampleEndpoint: "https://api.anthropic.com",
+  Vision: "2023-06-01",
+};
 
 export const OpenaiPath = {
   ChatPath: "v1/chat/completions",
@@ -138,10 +147,7 @@ const openaiModels = [
   "claude-3.5-sonnet",
 ];
 
-const googleModels = [
-  "gemini-1.0-pro",
-  "gemini-pro-vision",
-];
+const googleModels = ["gemini-1.0-pro", "gemini-pro-vision"];
 
 const anthropicModels = [
   "claude-instant-1.2",
