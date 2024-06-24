@@ -316,7 +316,7 @@ export function PreviewActions(props: {
     var api: ClientApi;
     if (config.modelConfig.model.startsWith("gemini")) {
       api = new ClientApi(ModelProvider.GeminiPro);
-    } else if (identifyDefaultClaudeModel(config.modelConfig.model)) {
+    } else if (config.modelConfig.model.startsWith("claude-api")) {
       api = new ClientApi(ModelProvider.Claude);
     } else {
       api = new ClientApi(ModelProvider.GPT);

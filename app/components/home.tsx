@@ -172,9 +172,9 @@ export function useLoadData() {
   const config = useAppConfig();
 
   var api: ClientApi;
-  if (config.modelConfig.model.startsWith("gemini")) {
+  if (config.modelConfig.model.startsWith("gemini-pro")) {
     api = new ClientApi(ModelProvider.GeminiPro);
-  } else if (identifyDefaultClaudeModel(config.modelConfig.model)) {
+  } else if (config.modelConfig.model.startsWith("claude-api")) {
     api = new ClientApi(ModelProvider.Claude);
   } else {
     api = new ClientApi(ModelProvider.GPT);
