@@ -10,8 +10,6 @@ import type {
 import { getClientApi } from "../client/api";
 import { ChatControllerPool } from "../client/controller";
 import { showToast } from "../components/ui-lib";
-import { ModelConfig, ModelType, useAppConfig } from "./config";
-import { createEmptyMask, Mask } from "./mask";
 import {
   DEFAULT_INPUT_TEMPLATE,
   DEFAULT_MODELS,
@@ -133,8 +131,11 @@ function getSummarizeModel(
       ];
     }
   }
-  if (currentModel.startsWith("gemini")) {
+  if (currentModel.startsWith("gemini-pro")) {
     return [GEMINI_SUMMARIZE_MODEL, ServiceProvider.Google];
+  }
+  if (currentModel.startsWith("gemini-1.5")) {
+    return [GEMINI_SUMMARIZE_MODEL, ServiceProvider.OpenAI];
   }
   return [currentModel, providerName];
 }

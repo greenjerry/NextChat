@@ -290,9 +290,24 @@ export const DEFAULT_TTS_VOICES = [
   "shimmer",
 ];
 
+const myModels = [
+  "gemini-1.5-pro-latest",
+  "gemini-1.5-pro-latest-vision",
+  "gemini-1.5-flash-latest",
+  "gpt-4o-free",
+  "gpt-4o-mini-free",
+  "gpt-4-free",
+  "gemini-1.5-pro-paid",
+  "gemini-1.5-flash-paid",
+  "gpt-4o",
+  "gpt-4o-mini",
+  "gpt-4-turbo",
+  "gpt-3.5-turbo",
+  "claude-3.5-sonnet",
+];
+
 const openaiModels = [
   "gpt-3.5-turbo",
-  "gpt-4-free",
   "gpt-3.5-turbo-1106",
   "gpt-3.5-turbo-0125",
   "gpt-4",
@@ -313,14 +328,14 @@ const openaiModels = [
   "dall-e-3",
   "o1-mini",
   "o1-preview",
-  "gemini-1.5-pro-latest",
-  "gemini-1.5-flash-latest",
-  "gemini-1.5-pro-paid",
-  "gemini-1.5-flash-paid",
-  "claude-3.5-sonnet",
 ];
 
-const googleModels = ["gemini-1.0-pro", "gemini-pro-vision"];
+const googleModels = [
+  "gemini-1.0-pro",
+  "gemini-1.5-pro-latest",
+  "gemini-1.5-flash-latest",
+  "gemini-pro-vision",
+];
 
 const anthropicModels = [
   "claude-instant-1.2",
@@ -403,6 +418,17 @@ const chatglmModels = [
 
 let seq = 1000; // 内置的模型序号生成器从1000开始
 export const DEFAULT_MODELS = [
+  ...myModels.map((name) => ({
+    name,
+    available: true,
+    sorted: seq++, // Global sequence sort(index)
+    provider: {
+      id: "self-host",
+      providerName: "Self-Host",
+      providerType: "Self-Host",
+      sorted: 0, // 这里是固定的，确保顺序与之前内置的版本一致
+    },
+  })),
   ...openaiModels.map((name) => ({
     name,
     available: true,
@@ -410,7 +436,7 @@ export const DEFAULT_MODELS = [
     provider: {
       id: "openai",
       providerName: "OpenAI",
-      providerType: "openai",
+      providerType: "OpenAI",
       sorted: 1, // 这里是固定的，确保顺序与之前内置的版本一致
     },
   })),
