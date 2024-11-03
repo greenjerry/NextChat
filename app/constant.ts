@@ -1,4 +1,4 @@
-export const OWNER = "ChatGPTNextWeb";
+export const OWNER = "greenjerry";
 export const REPO = "ChatGPT-Next-Web";
 export const REPO_URL = `https://github.com/${OWNER}/${REPO}`;
 export const PLUGINS_REPO_URL = `https://github.com/${OWNER}/NextChat-Awesome-Plugins`;
@@ -253,8 +253,8 @@ Latex inline: \\(x^2\\)
 Latex block: $$e=mc^2$$
 `;
 
-export const SUMMARIZE_MODEL = "gpt-4o-mini";
-export const GEMINI_SUMMARIZE_MODEL = "gemini-pro";
+export const SUMMARIZE_MODEL = "gpt-4o-mini-free";
+export const GEMINI_SUMMARIZE_MODEL = "gemini-1.5-flash-latest";
 
 export const KnowledgeCutOffDate: Record<string, string> = {
   default: "2021-09",
@@ -292,6 +292,7 @@ export const DEFAULT_TTS_VOICES = [
 
 const openaiModels = [
   "gpt-3.5-turbo",
+  "gpt-4-free",
   "gpt-3.5-turbo-1106",
   "gpt-3.5-turbo-0125",
   "gpt-4",
@@ -312,14 +313,14 @@ const openaiModels = [
   "dall-e-3",
   "o1-mini",
   "o1-preview",
-];
-
-const googleModels = [
-  "gemini-1.0-pro",
   "gemini-1.5-pro-latest",
   "gemini-1.5-flash-latest",
-  "gemini-pro-vision",
+  "gemini-1.5-pro-paid",
+  "gemini-1.5-flash-paid",
+  "claude-3.5-sonnet",
 ];
+
+const googleModels = ["gemini-1.0-pro", "gemini-pro-vision"];
 
 const anthropicModels = [
   "claude-instant-1.2",

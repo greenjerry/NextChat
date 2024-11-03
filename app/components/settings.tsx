@@ -1582,6 +1582,15 @@ export function Settings() {
               }
             ></input>
           </ListItem>
+          <ListItem title="Devtools">
+            <IconButton
+              icon={<ConfigIcon />}
+              text="Launch Devtools"
+              onClick={() => {
+                window.open("chrome://inspect/#devices");
+              }}
+            />
+          </ListItem>
 
           <ListItem
             title={Locale.Mask.Config.Artifacts.Title}
